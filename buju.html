@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>布局练习1</title>
+  </head>
+  <style>
+    body {
+      margin: 0px;
+      background-color: #eee;
+      height: 100vh;
+    }
+    /* *{
+      border: 1px solid;
+    }*/
+    .flex {
+      display: flex;
+    }
+    .bais {
+      background-color: white;
+    }
+    .flex1 {
+      flex: 1;
+    }
+    .column {
+      flex-direction: column;
+    }
+    .center{
+      justify-content: center;
+      align-items: center;
+    }
+    .mg{
+      margin: 8px;
+    }
+    .mgs{
+      margin-top: 8px;
+    }
+    .mgy{
+      margin-right: 8px;
+    }
+    .yy{
+      box-shadow:6px 6px 4px rgb(158, 153, 153);
+    }
+  </style>
+  <body class="flex">
+    <!--侧边栏-->
+    <div class="flex bais yy" style="width: 200px"></div>
+    <!--主区域-->
+    <div class="flex flex1 column">
+      <!--头部栏-->
+      <div class="flex bais" style="height: 80px"></div>
+      <!--主内容区-->
+      <div class="flex flex1">
+        <!--大区-->
+        <div class="flex column mg" style="flex: 3">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据块-->
+            <div style="width: 120px;height: 100px;" class="flex1 bais mgy yy"></div>
+            <div style="width: 120px;height: 100px;" class="flex1 bais mgy yy"></div>
+            <div style="width: 120px;height: 100px;" class="flex1 bais mgy yy"></div>
+            <div style="width: 120px;height: 100px;" class="flex1 bais yy "></div>
+          </div>
+          <!--列表区--> 
+          <div class="flex column bais mgs yy" style="height: 160px;"></div>
+          <div class="flex column bais mgs yy" style="height: 160px;"></div>
+          <div class="flex column bais mgs yy" style="height: 160px;"></div>
+        </div>
+        <!--小区-->
+        <div class="flex flex1 column mg ">
+          <!--提示区-->
+          <div class="bais yy" style="height: 120px;"></div>
+          <!--消息区-->
+          <div class="bais mgs yy" style="height: 240px;"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
